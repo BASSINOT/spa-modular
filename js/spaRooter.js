@@ -64,19 +64,36 @@ $(document).ready(function(){
             console.log($forsDatas);
             $.each($forsDatas,function(n,e){
                 if(n!='spaHttpAdresse'){
-                    $('input[name='+n+']').val(e);
-                    dataStorage[n]=e;
+                    switch(typeof(e)){
+                        case "boolean":
+                                $('input[name='+n+']').prop('checked',e);
+                                dataStorage[n]=e;
+                            break;
+                        default:
+                                $('input[name='+n+']').val(e);
+                                dataStorage[n]=e;
+                            break;
+                    }
                 }
             });
         }
     }
     
-    //icrémentation du local storage
+    //icrémentation du local storage pour les champs input et textarea
     $('.spa-datas-field').keyup(function(){
         dataStorage[$(this).attr('name')] = $(this).val();
         localStorage.setItem('formDatas',JSON.stringify(dataStorage));
         console.log(dataStorage);
     });
+    
+    //icrémentation du local storage pour checkbox
+    $('input[type=checkbox].spa-datas-field').change(function(){
+        dataStorage[$(this).attr('name')] = $(this).is(':checked');
+        localStorage.setItem('formDatas',JSON.stringify(dataStorage));
+        console.log(dataStorage);
+    });
+    
+    
     
     //désactivation de la fonction d'envoie native du form
     $('form').submit(function(e){
@@ -89,6 +106,14 @@ $(document).ready(function(){
         e.preventDefault();
         alert('action de submit');
         // VOTRE CODE ICI
+    });
+    
+    
+    //reset
+    $('.reset').click(function(e){
+        e.preventDefault();
+        alert('storage is free');
+        localStorage.removeItem('formDatas');
     });
     
 });
