@@ -2,9 +2,13 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <Meta name = "apple-mobile-web-app-capable" content = "yes">
+        <Meta name = "apple-mobile-web-app-status-bar-style" content = "black-translucent">
     </head>
     
     <body>
+       <!--
+       If you want a top menu, you can use this
         <section class="header">
             <ul>
                 <li><a href="index" class="spaRooter-link spaActive">homePage</a></li>
@@ -15,36 +19,47 @@
                 <li><a href="page5" class="spaRooter-link">Page5</a></li>
             </ul>
         </section>
-        
+        -->
         
         
         <section class="spaRooter-view view-name-index">
             <h1>youpi je suis la page home</h1>
+            <input class="spa-datas-field" type="text" name="tonnom" placeholder="your name"/>
+            <input class="spa-datas-field" type="text" name="tonnom1" placeholder="your name"/>
+        </section>
+        <section style="background : #606aea" class="spaRooter-view view-name-page1">
+            <h1>youpi je suis la page 1</h1>
+        </section>
+        <section style="background : #60e5ea" class="spaRooter-view view-name-page2">
+            <h1>youpi je suis la page 2</h1>
+        </section>
+        <section style="background : #60ea60" class="spaRooter-view view-name-page3">
+            <h1>youpi je suis la page 3</h1>
+            <input type="text" name="ton-nom" placeholder="your name"/>
+        </section>
+        <section style="background : #d5ea60" class="spaRooter-view view-name-page4">
+            <h1>youpi je suis la page 4</h1>
+            <input type="text" name="ton-nom" placeholder="your name"/>
+            <input type="text" name="ton-nom" placeholder="your name"/>
+        </section>
+        <section style="background : #df60ea" class="spaRooter-view view-name-page5">
+            <h1>youpi je suis la page 5</h1>
         </section>
         
         
-        <form>
+        <section class="spaSideMenu spaMenuHidden">
+            <ul>
+                <li><a href="#" class="menuBtn">M</a></li>
+                <li><a href="index" class="spaRooter-link spaActive">homePage</a></li>
+                <li><a href="page1" class="spaRooter-link">Page1</a></li>
+                <li><a href="page2" class="spaRooter-link">Page2</a></li>
+                <li><a href="page3" class="spaRooter-link">Page3</a></li>
+                <li><a href="page4" class="spaRooter-link">Page4</a></li>
+                <li><a href="page5" class="spaRooter-link">Page5</a></li>
+            </ul>
+        </section>
         
-            <section style="background : #606aea" class="spaRooter-view view-name-page1">
-                <h1>youpi je suis la page 1</h1>
-                <input type="text" name="ton-nom" placeholder="your name"/>
-            </section>
-            <section style="background : #60e5ea" class="spaRooter-view view-name-page2">
-                <h1>youpi je suis la page 2</h1>
-            </section>
-            <section style="background : #60ea60" class="spaRooter-view view-name-page3">
-                <h1>youpi je suis la page 3</h1>
-                <input type="text" name="ton-nom" placeholder="your name"/>
-            </section>
-            <section style="background : #d5ea60" class="spaRooter-view view-name-page4">
-                <h1>youpi je suis la page 4</h1>
-                <input type="text" name="ton-nom" placeholder="your name"/>
-                <input type="text" name="ton-nom" placeholder="your name"/>
-            </section>
-            <section style="background : #df60ea" class="spaRooter-view view-name-page5">
-                <h1>youpi je suis la page 5</h1>
-            </section>
-        </form>
+        
         <script src="js/jq.js"></script>
         <script src="js/spaRooter.js"></script>
     </body>
