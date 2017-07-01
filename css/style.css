@@ -1,0 +1,55 @@
+html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+.header{position: absolute; top: 0;left: 0;right: 0;}
+.header ul{display: block; text-align: center; background: #1493cb}
+.header ul li{display: inline-block}
+.header ul li a{display: inline-block; line-height: 40px;height: 40px;margin: 0; padding: 0 10px; text-transform: uppercase; text-decoration: none; color: aliceblue; font-family: Century Gothic}
+.header ul li a:hover{background: #67a9c6;transition-duration: 0.3s}
+.header ul li a.spaActive{background: #67a9c6;transition-duration: 0.3s}
+
+.spaRooter-view{position: absolute;top: 40px;left: 0;right: 0;bottom: 0;overflow-y: auto;font-family: Century Gothic;text-align: center; font-size: 100px;line-height: 100px;}
